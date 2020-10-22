@@ -1,3 +1,8 @@
 class Task < ApplicationRecord
   belongs_to :project
-end
+
+  def completed?
+  	!completed_at.blank?
+  end
+ end
+
